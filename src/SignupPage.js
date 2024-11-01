@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./SignupPage.css"
+import "./SignupPage.css";
 
 function SignupPage() {
   const [username, setUsername] = useState("");
@@ -11,11 +11,12 @@ function SignupPage() {
   const [emailError, setEmailError] = useState(""); // Email validation error
   const [passwordError, setPasswordError] = useState(""); // Password validation error
   const navigate = useNavigate();
-  var Link = require('react-router-dom').Link
+  var Link = require("react-router-dom").Link;
 
   // Regular expressions for validation
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple email pattern
-  const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+  const passwordRegex =
+    /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
   // Password must be at least 8 characters, with at least one uppercase, one digit, and one special character
 
   // Validate email as the user types
@@ -48,11 +49,14 @@ function SignupPage() {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/api/accounts/signup/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, email, password }),
-      });
+      const response = await fetch(
+        "http://localhost:8000/api/accounts/signup/",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username, email, password }),
+        }
+      );
 
       if (response.ok) {
         setMessage("User registered successfully. Redirecting to login...");
@@ -99,12 +103,16 @@ function SignupPage() {
         {passwordError && <p className="error-message">{passwordError}</p>}
         {message && <p className="success-message">{message}</p>}
         {error && <p className="error-message">{error}</p>}
-        <button onClick={handleSignup} className="signup-button" disabled={emailError || passwordError}>
+        <button
+          onClick={handleSignup}
+          className="signup-button"
+          disabled={emailError || passwordError}
+        >
           Sign Up
         </button>
         <p>
           Already have an account?{" "}
-          <Link to="/" className="login-link">
+          <Link to="/login" className="login-link">
             Login
           </Link>
         </p>
