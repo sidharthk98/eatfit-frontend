@@ -25,6 +25,15 @@
   font-size: 30px;
 }
 
+.checkout {
+  margin-bottom: 30px;
+}
+
+.checkout p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .countHandler input {
   width: 40px;
   padding: 7px 10px;
