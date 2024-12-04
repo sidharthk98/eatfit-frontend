@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "./components/navbar";
-import Shop from "./pages/shop/shop";
-import Footer from "./components/footer";
+import Navbar from "../components/navbar/navbar.jsx";
+import Shop from "./shop/shop.jsx";
+import Footer from "../components/footer/footer.jsx";
 
 const HomePage = () => {
 	return (

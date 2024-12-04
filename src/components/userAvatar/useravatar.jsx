@@ -1,6 +1,6 @@
 // UserAvatar.js
 import React, { useState, useEffect, useRef } from "react";
-import defaultAvatar from "../assets/image.png";
+import defaultAvatar from "../../assets/image.png";
 import "./useravatar.css"; // Create a new CSS file for UserAvatar-specific styles
 
 const UserAvatar = () => {

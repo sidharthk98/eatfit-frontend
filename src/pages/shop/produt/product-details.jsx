@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
-import { ShopContext } from "../../context/shop-context";
-import "./shop.css";
-import { PRODUCTS } from "../../products";
-import Shop from "./shop";
+import { ShopContext } from "../../../context/shop-context";
+import "../shop.css";
+import { PRODUCTS } from "../../../products";
+import Shop from "../shop";
 
 const ProductDetail = () => {
   const { id } = useParams();

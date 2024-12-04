@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url("./eatfit-bg.jpeg"); /* Set your background image here */
+  background-image: url("../../assets/eatfit-bg.jpeg"); /* Set your background image here */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

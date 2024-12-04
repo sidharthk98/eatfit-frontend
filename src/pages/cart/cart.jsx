@@ -3,7 +3,7 @@ import { ShopContext } from "../../context/shop-context";
 import { PRODUCTS } from "../../products";
 import { CartItem } from "./cart-item";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../../components/navbar";
+import Navbar from "../../components/navbar/navbar";
 
 import "./cart.css";
 export const Cart = () => {

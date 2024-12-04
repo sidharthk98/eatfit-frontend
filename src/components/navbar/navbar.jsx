@@ -1,9 +1,9 @@
 import React, { useState, useContext, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { MdOutlineShoppingCart } from "react-icons/md";
-import { ShopContext } from "../context/shop-context";
+import { ShopContext } from "../../context/shop-context";
 import "./navbar.css";
-import UserAvatar from "./useravatar";
+import UserAvatar from "../userAvatar/useravatar";
 
 const Navbar = () => {
   const { getTotalCartQuantity } = useContext(ShopContext);
