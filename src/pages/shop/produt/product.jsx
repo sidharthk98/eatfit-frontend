@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const Product = (props) => {
 	const { id, name, price, image_url, rating } = props.data;
-	const { addToCart, cartItems, removeFromCart } = useContext(ShopContext);
+	const { addProduct, cartItems, deleteProduct } = useContext(ShopContext);
 	const navigate = useNavigate;
 
 	const cartItemCount = cartItems[id];
@@ -40,17 +40,17 @@ const Product = (props) => {
 			{cartItemCount > 0 ? (
 				<div className="cart-controls">
 					<button
-						className="removeFromCartBttn"
-						onClick={() => removeFromCart(id)}>
+						className="deleteProductBttn"
+						onClick={() => deleteProduct(id)}>
 						-
 					</button>
 					<span className="cart-count">{cartItemCount}</span>
-					<button className="addToCartBttn" onClick={() => addToCart(id)}>
+					<button className="addProductBttn" onClick={() => addProduct(id)}>
 						+
 					</button>
 				</div>
 			) : (
-				<button className="addToCart" onClick={() => addToCart(id)}>
+				<button className="addProduct" onClick={() => addProduct(id)}>
 					Add To Cart
 				</button>
 			)}

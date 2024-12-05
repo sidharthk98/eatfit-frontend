@@ -37,7 +37,7 @@
 	cursor: pointer;
 }
 
-.addToCart {
+.addProduct {
 	background-color: transparent;
 	border: 2px solid rgb(19, 19, 19);
 	min-width: 100px;
@@ -49,14 +49,14 @@
 	font-size: 18px;
 }
 
-.addToCart:hover {
+.addProduct:hover {
 	background-color: rgb(19, 19, 19);
 	color: white;
 	cursor: pointer;
 }
 
-.addToCartBttn,
-.removeFromCartBttn {
+.addProductBttn,
+.deleteProductBttn {
 	color: white;
 	border: none;
 	padding: 5px 10px;
@@ -65,7 +65,7 @@
 	font-weight: 600;
 }
 
-.removeFromCartBttn {
+.deleteProductBttn {
 	background-color: white;
 }
 
@@ -75,12 +75,12 @@
 	gap: 8px;
 }
 
-.addToCartBttn,
-.removeFromCartBttn {
+.addProductBttn,
+.deleteProductBttn {
 	background-color: #4caf50; /* Green */
 }
 
-.removeFromCartBttn {
+.deleteProductBttn {
 	background-color: #e74c3c; /* Red for remove button */
 }
 
